@@ -19,11 +19,11 @@ class File_Wav
     /**
      * @var string
      */
-    private $file;
+    protected $file;
     /**
      * @var File_Wav_Info
      */
-    private $info;
+    protected $info;
 
 
 

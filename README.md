@@ -1,12 +1,11 @@
-File_Wav
-========
+# File_Wav
 
 PEAR Package for simple information on WAV files
 
 Based on classAudioFile (michael kamleitner (mika@ssw.co.at))
 
 
-example:
+Example:
 ```php
 <?php
 set_include_path(__DIR__);
