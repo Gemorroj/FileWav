@@ -4,11 +4,15 @@ PEAR Package for simple information on WAV files
 
 Based on classAudioFile (michael kamleitner (mika@ssw.co.at))
 
+Requirements:
+
+- PHP >= 5.2
+
 
 Example:
 ```php
 <?php
-set_include_path(__DIR__);
+set_include_path(dirname(__FILE__));
 
 
 require_once 'File/Wav.php';
