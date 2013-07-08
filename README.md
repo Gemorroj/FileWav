@@ -1,5 +1,8 @@
 # File_Wav
 
+[![Build Status](https://secure.travis-ci.org/Gemorroj/File_Wav.png?branch=master)](https://travis-ci.org/Gemorroj/File_Wav)
+
+
 PEAR Package for simple information on WAV files
 
 Based on classAudioFile (michael kamleitner (mika@ssw.co.at))
