@@ -1,27 +1,14 @@
 <?php
-/**
- *
- * This software is distributed under the GNU GPL v3.0 license.
- *
- * @author    Gemorroj
- * @copyright 2012 http://wapinet.ru
- * @license   http://www.gnu.org/licenses/gpl-3.0.txt
- * @link      https://github.com/Gemorroj/File_Wav
- * @version   0.1 alpha
- *
- */
+namespace FileWav;
 
-require_once 'File/Wav/Info.php';
-require_once 'File/Wav/Exception.php';
-
-class File_Wav
+class Wav
 {
     /**
      * @var string
      */
     protected $file;
     /**
-     * @var File_Wav_Info
+     * @var Info
      */
     protected $info;
 
@@ -30,18 +17,18 @@ class File_Wav
     /**
      * @param string $file
      *
-     * @throws File_Wav_Exception
+     * @throws Exception
      */
     public function __construct($file)
     {
         $this->file = $file;
-        $this->info = new File_Wav_Info();
+        $this->info = new Info();
         $this->read();
     }
 
 
     /**
-     * @return File_Wav_Info
+     * @return Info
      */
     public function getInfo()
     {
@@ -50,7 +37,7 @@ class File_Wav
 
 
     /**
-     * @throws File_Wav_Exception
+     * @throws Exception
      */
     private function read ()
     {
@@ -58,14 +45,14 @@ class File_Wav
 
         $file = fopen($this->file, 'r');
         if ($file === false) {
-            throw new File_Wav_Exception('Can not read file');
+            throw new Exception('Can not read file');
         }
 
         $this->info->setFilesize(filesize($this->info->getFilename()));
 
         if ($this->info->getFilesize() <= 16) {
             fclose($file);
-            throw new File_Wav_Exception('Invalid file size');
+            throw new Exception('Invalid file size');
         }
 
         $chunkId = fgetc($file) . fgetc($file) . fgetc($file) . fgetc($file);
@@ -79,14 +66,14 @@ class File_Wav
 
         if ($chunkId !== 'RIFF' || $chunkType !== 'WAVE') {
             fclose($file);
-            throw new File_Wav_Exception('Invalid file type');
+            throw new Exception('Invalid file type');
         }
 
         $chunkId = fgetc($file) . fgetc($file) . fgetc($file) . fgetc($file);
         $chunkSize = $this->longCalc(fgetc($file), fgetc($file), fgetc($file), fgetc($file), 0);
         if ($chunkId !== 'fmt ') {
             fclose($file);
-            throw new File_Wav_Exception('Invalid file format');
+            throw new Exception('Invalid file format');
         }
 
         $this->info->setCompression($this->shortCalc(fgetc($file), fgetc($file), 0));
@@ -173,5 +160,4 @@ class File_Wav
             return ($b2 + ($b1 * 256));
         }
     }
-
 }

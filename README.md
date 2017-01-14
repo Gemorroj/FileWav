@@ -1,26 +1,21 @@
-# File_Wav
+# Wav files parser
 
-[![Build Status](https://secure.travis-ci.org/Gemorroj/File_Wav.png?branch=master)](https://travis-ci.org/Gemorroj/File_Wav)
+[![Build Status](https://secure.travis-ci.org/Gemorroj/File_Wav.png?branch=master)](https://travis-ci.org/Gemorroj/FileWav)
 
-
-PEAR Package for simple information on WAV files
 
 Based on classAudioFile (michael kamleitner (mika@ssw.co.at))
 
 Requirements:
 
-- PHP >= 5.2
+- PHP >= 5.3
 
 
 Example:
 ```php
 <?php
-set_include_path(dirname(__FILE__));
+use FileWav\Wav;
 
-
-require_once 'File/Wav.php';
-
-$wav = new File_Wav('./file.wav');
+$wav = new Wav('path_to/file.wav');
 
 echo '<pre>';
 

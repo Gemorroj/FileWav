@@ -1,7 +1,7 @@
 <?php
-require_once 'File/Wav.php';
+namespace Tests\FileWav;
 
-class File_WavTest extends PHPUnit_Framework_TestCase
+class WavTest extends \PHPUnit_Framework_TestCase
 {
     public function testWav()
     {

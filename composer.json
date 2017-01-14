@@ -1,0 +1,23 @@
+{
+    "name": "gemorroj/file-wav",
+    "description": "wav files parser",
+    "keywords": ["wav", "wave", "Waveform Audio File Format"],
+    "type": "library",
+    "license": "LGPL-3.0",
+    "authors": [
+        {
+            "name": "Gemorroj"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.8|~5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wav\\": "src/FileWav"
+        }
+    }
+}

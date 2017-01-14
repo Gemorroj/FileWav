@@ -1,17 +1,7 @@
 <?php
-/**
- *
- * This software is distributed under the GNU GPL v3.0 license.
- *
- * @author    Gemorroj
- * @copyright 2012 http://wapinet.ru
- * @license   http://www.gnu.org/licenses/gpl-3.0.txt
- * @link      https://github.com/Gemorroj/File_Wav
- * @version   0.1 alpha
- *
- */
+namespace FileWav;
 
-class File_Wav_Info
+class Info
 {
     /**
      * @var int|null
@@ -49,7 +39,7 @@ class File_Wav_Info
     /**
      * @param int $bits
      *
-     * @return File_Wav_Info
+     * @return $this
      */
     public function setBits($bits)
     {
@@ -68,7 +58,7 @@ class File_Wav_Info
     /**
      * @param int $byterate
      *
-     * @return File_Wav_Info
+     * @return $this
      */
     public function setByterate($byterate)
     {
@@ -87,7 +77,7 @@ class File_Wav_Info
     /**
      * @param int $channels
      *
-     * @return File_Wav_Info
+     * @return $this
      */
     public function setChannels($channels)
     {
@@ -106,7 +96,7 @@ class File_Wav_Info
     /**
      * @param string $compression
      *
-     * @return File_Wav_Info
+     * @return $this
      */
     public function setCompression($compression)
     {
@@ -125,7 +115,7 @@ class File_Wav_Info
     /**
      * @param string $filename
      *
-     * @return File_Wav_Info
+     * @return $this
      */
     public function setFilename($filename)
     {
@@ -144,7 +134,7 @@ class File_Wav_Info
     /**
      * @param int $filesize
      *
-     * @return File_Wav_Info
+     * @return $this
      */
     public function setFilesize($filesize)
     {
@@ -163,7 +153,7 @@ class File_Wav_Info
     /**
      * @param int $framerate
      *
-     * @return File_Wav_Info
+     * @return $this
      */
     public function setFramerate($framerate)
     {
@@ -182,7 +172,7 @@ class File_Wav_Info
     /**
      * @param int $length
      *
-     * @return File_Wav_Info
+     * @return $this
      */
     public function setLength($length)
     {
