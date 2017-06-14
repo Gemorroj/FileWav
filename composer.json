@@ -17,7 +17,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Wav\\": "src/FileWav"
+            "FileWav\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FileWav\\Tests\\": "tests/"
         }
     }
 }

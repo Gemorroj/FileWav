@@ -13,7 +13,6 @@ class Wav
     protected $info;
 
 
-
     /**
      * @param string $file
      *
