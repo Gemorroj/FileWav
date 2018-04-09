@@ -5,12 +5,18 @@
 
 Based on classAudioFile (michael kamleitner (mika@ssw.co.at))
 
-Requirements:
 
+###Requirements:
 - PHP >= 5.6
 
 
-Example:
+### Installation:
+```bash
+composer require gemorroj/file-wav
+```
+
+
+###Example:
 ```php
 <?php
 use FileWav\Wav;
