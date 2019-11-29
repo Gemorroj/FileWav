@@ -1,9 +1,11 @@
 <?php
 namespace FileWav\Tests;
 
-class WavTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class WavTest extends TestCase
 {
-    public function testWav()
+    public function testWav(): void
     {
         $this->markTestSkipped('Not implemented yet');
     }
