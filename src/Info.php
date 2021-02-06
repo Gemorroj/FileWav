@@ -1,4 +1,5 @@
 <?php
+
 namespace FileWav;
 
 class Info
@@ -44,6 +45,7 @@ class Info
     public function setBits($bits)
     {
         $this->bits = $bits;
+
         return $this;
     }
 
@@ -63,6 +65,7 @@ class Info
     public function setByterate($byterate)
     {
         $this->byterate = $byterate;
+
         return $this;
     }
 
@@ -82,6 +85,7 @@ class Info
     public function setChannels($channels)
     {
         $this->channels = $channels;
+
         return $this;
     }
 
@@ -101,11 +105,12 @@ class Info
     public function setCompression($compression)
     {
         $this->compression = $compression;
+
         return $this;
     }
 
     /**
-     * @return null|string
+     * @return string|null
      */
     public function getCompression()
     {
@@ -120,11 +125,12 @@ class Info
     public function setFilename($filename)
     {
         $this->filename = $filename;
+
         return $this;
     }
 
     /**
-     * @return null|string
+     * @return string|null
      */
     public function getFilename()
     {
@@ -139,6 +145,7 @@ class Info
     public function setFilesize($filesize)
     {
         $this->filesize = $filesize;
+
         return $this;
     }
 
@@ -158,6 +165,7 @@ class Info
     public function setFramerate($framerate)
     {
         $this->framerate = $framerate;
+
         return $this;
     }
 
@@ -177,6 +185,7 @@ class Info
     public function setLength($length)
     {
         $this->length = $length;
+
         return $this;
     }
 

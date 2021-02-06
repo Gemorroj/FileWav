@@ -7,7 +7,7 @@ Based on classAudioFile (michael kamleitner (mika@ssw.co.at))
 
 
 ### Requirements:
-- PHP >= 7.1.3
+- PHP >= 7.3
 
 
 ### Installation:
@@ -23,9 +23,19 @@ use FileWav\Wav;
 
 $wav = new Wav('path_to/file.wav');
 
-echo '<pre>';
 
 print_r($wav->getInfo());
-
-echo '</pre>';
+/*
+FileWav\Info Object
+(
+    [filesize:FileWav\Info:private] => 1073218
+    [filename:FileWav\Info:private] => path_to/file.wav
+    [compression:FileWav\Info:private] => 1
+    [channels:FileWav\Info:private] => 2
+    [framerate:FileWav\Info:private] => 8000
+    [byterate:FileWav\Info:private] => 32000
+    [bits:FileWav\Info:private] => 16
+    [length:FileWav\Info:private] => 33.529625
+)
+ */
 ```
