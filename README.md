@@ -1,6 +1,6 @@
 # Wav files parser
 
-[![Build Status](https://secure.travis-ci.org/Gemorroj/FileWav.png?branch=master)](https://travis-ci.org/Gemorroj/FileWav)
+[![Continuous Integration](https://github.com/Gemorroj/FileWav/workflows/Continuous%20Integration/badge.svg?branch=master)](https://github.com/Gemorroj/FileWav/actions?query=workflow%3A%22Continuous+Integration%22)
 
 
 Based on classAudioFile (michael kamleitner (mika@ssw.co.at))
