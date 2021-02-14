@@ -3,7 +3,7 @@
     "description": "wav files parser",
     "keywords": ["wav", "wave", "Waveform Audio File Format"],
     "type": "library",
-    "license": "LGPL-3.0",
+    "license": "LGPL-3.0-or-later",
     "authors": [
         {
             "name": "Gemorroj"
