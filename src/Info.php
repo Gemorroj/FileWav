@@ -4,195 +4,107 @@ namespace FileWav;
 
 class Info
 {
-    /**
-     * @var int|null
-     */
-    private $filesize;
-    /**
-     * @var string|null
-     */
-    private $filename;
-    /**
-     * @var string|null
-     */
-    private $compression;
-    /**
-     * @var int|null
-     */
-    private $channels;
-    /**
-     * @var int|null
-     */
-    private $framerate;
-    /**
-     * @var int|null
-     */
-    private $byterate;
-    /**
-     * @var int|null
-     */
-    private $bits;
-    /**
-     * @var int|null
-     */
-    private $length;
+    private ?int $filesize = null;
+    private ?string $filename = null;
+    private ?string $compression = null;
+    private ?int $channels = null;
+    private ?int $framerate = null;
+    private ?int $byterate = null;
+    private ?int $bits = null;
+    private ?float $length = null;
 
-    /**
-     * @param int $bits
-     *
-     * @return $this
-     */
-    public function setBits($bits)
+    public function setBits(int $bits): self
     {
         $this->bits = $bits;
 
         return $this;
     }
 
-    /**
-     * @return int|null
-     */
-    public function getBits()
+    public function getBits(): ?int
     {
         return $this->bits;
     }
 
-    /**
-     * @param int $byterate
-     *
-     * @return $this
-     */
-    public function setByterate($byterate)
+    public function setByterate(int $byterate): self
     {
         $this->byterate = $byterate;
 
         return $this;
     }
 
-    /**
-     * @return int|null
-     */
-    public function getByterate()
+    public function getByterate(): ?int
     {
         return $this->byterate;
     }
 
-    /**
-     * @param int $channels
-     *
-     * @return $this
-     */
-    public function setChannels($channels)
+    public function setChannels(int $channels): self
     {
         $this->channels = $channels;
 
         return $this;
     }
 
-    /**
-     * @return int|null
-     */
-    public function getChannels()
+    public function getChannels(): ?int
     {
         return $this->channels;
     }
 
-    /**
-     * @param string $compression
-     *
-     * @return $this
-     */
-    public function setCompression($compression)
+    public function setCompression(string $compression): self
     {
         $this->compression = $compression;
 
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
-    public function getCompression()
+    public function getCompression(): ?string
     {
         return $this->compression;
     }
 
-    /**
-     * @param string $filename
-     *
-     * @return $this
-     */
-    public function setFilename($filename)
+    public function setFilename(string $filename): self
     {
         $this->filename = $filename;
 
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
-    public function getFilename()
+    public function getFilename(): ?string
     {
         return $this->filename;
     }
 
-    /**
-     * @param int $filesize
-     *
-     * @return $this
-     */
-    public function setFilesize($filesize)
+    public function setFilesize(int $filesize): self
     {
         $this->filesize = $filesize;
 
         return $this;
     }
 
-    /**
-     * @return int|null
-     */
-    public function getFilesize()
+    public function getFilesize(): ?int
     {
         return $this->filesize;
     }
 
-    /**
-     * @param int $framerate
-     *
-     * @return $this
-     */
-    public function setFramerate($framerate)
+    public function setFramerate(int $framerate): self
     {
         $this->framerate = $framerate;
 
         return $this;
     }
 
-    /**
-     * @return int|null
-     */
-    public function getFramerate()
+    public function getFramerate(): ?int
     {
         return $this->framerate;
     }
 
-    /**
-     * @param int $length
-     *
-     * @return $this
-     */
-    public function setLength($length)
+    public function setLength(float $length): self
     {
         $this->length = $length;
 
         return $this;
     }
 
-    /**
-     * @return int|null
-     */
-    public function getLength()
+    public function getLength(): ?float
     {
         return $this->length;
     }

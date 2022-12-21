@@ -4,21 +4,13 @@ namespace FileWav;
 
 class Wav
 {
-    /**
-     * @var string
-     */
-    protected $file;
-    /**
-     * @var Info
-     */
-    protected $info;
+    protected string $file;
+    protected Info $info;
 
     /**
-     * @param string $file
-     *
      * @throws Exception
      */
-    public function __construct($file)
+    public function __construct(string $file)
     {
         $this->file = $file;
         $this->info = new Info();
@@ -112,15 +104,9 @@ class Wav
     /**
      * longCalc calculates the decimal value of 4 bytes.
      *
-     * @param string $b1
-     * @param string $b2
-     * @param string $b3
-     * @param string $b4
-     * @param int    $mode 0 - b1 is the byte with least value. 1 - b1 is the byte with most value
-     *
-     * @return int
+     * @param int $mode 0 - b1 is the byte with least value. 1 - b1 is the byte with most value
      */
-    private function longCalc($b1, $b2, $b3, $b4, $mode = 0)
+    private function longCalc(string $b1, string $b2, string $b3, string $b4, int $mode = 0): float
     {
         $b1 = \hexdec(\bin2hex($b1));
         $b2 = \hexdec(\bin2hex($b2));
@@ -136,13 +122,9 @@ class Wav
     /**
      * shortCalc calculates the decimal value of 2 bytes.
      *
-     * @param string $b1
-     * @param string $b2
-     * @param int    $mode 0 - b1 is the byte with least value. 1 - b1 is the byte with most value
-     *
-     * @return int
+     * @param int $mode 0 - b1 is the byte with least value. 1 - b1 is the byte with most value
      */
-    private function shortCalc($b1, $b2, $mode = 0)
+    private function shortCalc(string $b1, string $b2, int $mode = 0): int
     {
         $b1 = \hexdec(\bin2hex($b1));
         $b2 = \hexdec(\bin2hex($b2));
