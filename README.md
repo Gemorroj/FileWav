@@ -1,6 +1,6 @@
 # Wav files parser
 
-[![Continuous Integration](https://github.com/Gemorroj/FileWav/workflows/Continuous%20Integration/badge.svg?branch=master)](https://github.com/Gemorroj/FileWav/actions?query=workflow%3A%22Continuous+Integration%22)
+[![Continuous Integration](https://github.com/Gemorroj/FileWav/workflows/Continuous%20Integration/badge.svg)](https://github.com/Gemorroj/FileWav/actions?query=workflow%3A%22Continuous+Integration%22)
 
 
 Based on classAudioFile (michael kamleitner (mika@ssw.co.at))
