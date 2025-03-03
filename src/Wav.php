@@ -29,7 +29,7 @@ class Wav
     {
         $this->info->setFilename(\realpath($this->file));
 
-        $file = @\fopen($this->file, 'rb');
+        $file = @\fopen($this->file, 'r');
         if (false === $file) {
             throw new Exception('Can not read file');
         }
