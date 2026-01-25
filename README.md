@@ -7,7 +7,7 @@ Based on classAudioFile (michael kamleitner (mika@ssw.co.at))
 
 
 ### Requirements:
-- PHP >= 8.1
+- PHP >= 8.2
 
 
 ### Installation:
