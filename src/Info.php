@@ -6,7 +6,7 @@ class Info
 {
     private ?int $filesize = null;
     private ?string $filename = null;
-    private ?string $compression = null;
+    private ?int $compression = null;
     private ?int $channels = null;
     private ?int $framerate = null;
     private ?int $byterate = null;
@@ -49,14 +49,14 @@ class Info
         return $this->channels;
     }
 
-    public function setCompression(string $compression): self
+    public function setCompression(int $compression): self
     {
         $this->compression = $compression;
 
         return $this;
     }
 
-    public function getCompression(): ?string
+    public function getCompression(): ?int
     {
         return $this->compression;
     }

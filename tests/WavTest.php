@@ -15,6 +15,8 @@ class WavTest extends TestCase
         $info = $wav->getInfo();
 
         self::assertSame(1073218, $info->getFilesize());
+        self::assertSame(1, $info->getCompression());
+        self::assertSame(2, $info->getChannels());
         self::assertSame(8000, $info->getFramerate());
         self::assertSame(32000, $info->getByterate());
         self::assertSame(16, $info->getBits());

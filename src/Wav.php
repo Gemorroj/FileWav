@@ -27,14 +27,25 @@ class Wav
      */
     private function read(): void
     {
-        $this->info->setFilename(\realpath($this->file));
+        $path = \realpath($this->file);
+        if (false === $path) {
+            throw new Exception('Can not read file');
+        }
 
-        $file = @\fopen($this->file, 'r');
+        $this->info->setFilename($path);
+
+        $file = @\fopen($path, 'r');
         if (false === $file) {
             throw new Exception('Can not read file');
         }
 
-        $this->info->setFilesize(\filesize($this->info->getFilename()));
+        $filesize = \filesize($path);
+        if (false === $filesize) {
+            \fclose($file);
+            throw new Exception('Can not read file');
+        }
+
+        $this->info->setFilesize($filesize);
 
         if ($this->info->getFilesize() <= 16) {
             \fclose($file);
