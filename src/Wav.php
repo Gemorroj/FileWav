@@ -83,9 +83,9 @@ class Wav
 
         $this->info->setBits($this->shortCalc(\fgetc($file), \fgetc($file), 0));
         if (16 < $chunkSize) {
-            $extra_bytes = $this->shortCalc(\fgetc($file), \fgetc($file), 1);
+            $extraBytes = $this->shortCalc(\fgetc($file), \fgetc($file), 0);
             $j = 0;
-            while ($j < $extra_bytes && !\feof($file)) {
+            while ($j < $extraBytes && !\feof($file)) {
                 \fgetc($file);
                 ++$j;
             }
