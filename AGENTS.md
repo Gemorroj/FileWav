@@ -23,3 +23,6 @@ PHP library for parsing WAV files (`FileWav\`, PSR-4, `src/`).
 - Keep changes minimal and focused.
 - Add or update tests for behavior changes.
 - Ensure tests pass before finishing.
+
+## Conventions
+- Commit messages follow [Conventional Commits](https://www.conventionalcommits.org/).
